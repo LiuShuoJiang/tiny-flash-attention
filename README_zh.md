@@ -203,15 +203,51 @@ for j in range(k_block_num):
 
 
 
+## 实验结果
 
+1. `BS, HEAD, SEQLEN, DIM = 1, 32, 4096, 256`:
 
+```
+baseline: 
+ 216.7600393295288
+flash2_cutlass_ref: 
+ 12.1734619140625
+official_ref: 
+ 11.859321594238281
+```
 
+2. `BS, HEAD, SEQLEN, DIM = 1, 16, 4096, 256`:
 
+```
+baseline: 
+ 47.36437797546387
+flash2_cutlass_ref: 
+ 6.220269203186035
+official_ref: 
+ 6.0070037841796875
+```
 
+3. `BS, HEAD, SEQLEN, DIM = 2, 16, 4096, 256`
 
+```
+baseline: 
+ 221.1364507675171
+flash2_cutlass_ref: 
+ 12.34884262084961
+official_ref: 
+ 11.955070495605469
+```
 
+4. `BS, HEAD, SEQLEN, DIM = 1, 16, 2048, 256`:
 
-
+```
+baseline: 
+ 12.973570823669434
+flash2_cutlass_ref: 
+ 1.7249822616577148
+official_ref: 
+ 1.744699478149414
+```
 
 ## ref
 
